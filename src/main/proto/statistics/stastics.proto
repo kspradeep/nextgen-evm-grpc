@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package statistics;
+
+option java_package = "com.proto.statistics";
+option java_multiple_files = true;
+
+message Statistics{
+    string first_name = 1;
+    string last_name = 2;
+}
+
+message StatisticsRequest {
+    Statistics statistics = 1;
+}
+
+message StatisticsResponse {
+    string result = 1;
+}
+
+service StatisticsService{
+    //Unary
+    rpc Statistics(StatisticsRequest) returns (StatisticsResponse) {};
+}
