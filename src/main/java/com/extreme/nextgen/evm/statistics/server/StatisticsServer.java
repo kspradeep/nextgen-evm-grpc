@@ -12,7 +12,7 @@ public class StatisticsServer {
 
         // plaintext server
         Server server = ServerBuilder.forPort(50056)
-                 .addService(new StatisticsServerImpl())
+                .addService(new StatisticsServerImpl())
                 .build();
 
 
